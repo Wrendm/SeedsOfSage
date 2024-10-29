@@ -1,0 +1,40 @@
+.header{
+    background-color: #BFD8BD;
+}
+
+.btn, .btn a{
+    background-color: #DDE7C7 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    font-size: 22px !important;
+}
+
+.btn-secondary{
+    background-color: #DDE7C7;
+}
+
+.primary-text{
+    color: #fff;
+}
+
+.nav-link{
+    color: #fff !important;
+    font-size: 22px !important;
+    padding: 0 30px !important;
+}
+
+.form-control-primary{
+    background-color: #DDE7C7;
+}
+
+.header-img{
+    width: 50% !important;
+}
+
+.category-card-img{
+    background-color: #DDE7C7;
+}
+
+.special-card-img{
+    background-color: #DDE7C7;
+}
