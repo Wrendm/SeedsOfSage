@@ -1,12 +1,31 @@
-.header{
-    background-color: #BFD8BD;
+body{
+    background-color: #edebe4 !important;
 }
 
-.btn, .btn a{
-    background-color: #DDE7C7 !important;
-    color: #fff !important;
-    border-color: #fff !important;
-    font-size: 22px !important;
+.row{
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    width: 100%;
+}
+
+.footer a{
+    color:#dde7c7 !important;
+}
+
+td{
+    padding: 0 10px;
+}
+
+h1{
+    margin-bottom: 1.5rem !important;
+}
+
+h2{
+    margin-bottom: 20px !important;
+    padding: 0px !important;
 }
 
 .btn-secondary{
@@ -17,24 +36,96 @@
     color: #fff;
 }
 
+input, textarea{
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin: 12px 0 !important;
+    width: 60%;
+}
+
+.nav-pills .nav-link.active{
+    background-color: #DDE7C7 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    font-size: 22px !important;
+}
+
 .nav-link{
     color: #fff !important;
     font-size: 22px !important;
-    padding: 0 30px !important;
+    padding: 10px 30px !important;
 }
 
-.form-control-primary{
-    background-color: #DDE7C7;
+.dropdown-menu.show {
+    margin-left:30px !important;
+}
+
+.dropdown-item{
+    color:#587059 !important;
 }
 
 .header-img{
     width: 50% !important;
 }
 
-.category-card-img{
-    background-color: #DDE7C7;
+.hero-image {
+    background-image: url("/images/trail-crop.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.blog-hero-image {
+    background-image: url("/images/oregonWaterfall.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+  
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 
-.special-card-img{
+.vertical-img{
+    max-height:450px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.about-brief{
+    background-color: #A3B18A;
+    color: #121c17;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 0 15px;
+}
+
+.approach{
+    background-color: #A3B18A;
+    color: #121c17;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 0 15px;
+}
+
+.community{
+    background-color: #A3B18A;
+    color: #121c17;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 0 15px;
+}
+
+.form-control-primary{
     background-color: #DDE7C7;
 }

@@ -1,0 +1,6 @@
+config.php
+admin/config/constants.php
+*:Zone.Identifier
+*.sql
+*:Zone.Identifier
+*.sql
