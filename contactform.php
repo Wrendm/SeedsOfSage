@@ -3,62 +3,30 @@
     <div class="col-4 align-self-start border-bottom border-3">
         <h1>Contact Skye</h1>
     </div>
-    <div class="col-md-7 col-lg-8">
-        <form class="needs-validation" method= "post" novalidate>
-            <div class="row g-3">
-                <div class="col-sm-6">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" name="name" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Valid is required.
-                    </div>
-                </div>
+    <div class="col-md-7 col-lg-8 my-3">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="d285ca87-eab7-4638-9ecf-4c8ba802898a">
 
-                <div class="col-12">
-                <label for="email" class="form-label">Email <span class="text-body-secondary"></span></label>
-                <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
-                <div class="invalid-feedback">
-                    Please enter a valid email address for updates.
-                </div>
-                </div>
-                
-                <button class="w-100 btn btn-primary btn-lg" name="submit" type="submit">Submit Message</button>
-            </div>
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+            <h4>Name:</h4>
+            <input type="text" name="name" required>
+            <h4>Contact Email:</h4>
+            <input type="email" name="email" required>
+            <h4>Message:</h4>
+            <textarea name="message" placeholder="Your message here: " required></textarea>
+            <p>
+            <span style="font-style: italic;">CONFIDENTIALITY NOTICE:</span> Please keep in mind that this messaging portal is not secure. Although it is unlikely, there is a possibility that the information you include may be intercepted and read by other parties besides the person to whom it is intended. Please keep the information you provide minimal and I will be in touch with you soon to connect further.
+            </p>
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <!-- Custom Confirmation / Success Page -->
+            <!-- <input type="hidden" name="redirect" value="./confirmation.php"> -->
+
+            <button type="submit">Submit Message</button>
         </form>
     </div>
-
-    <?php
-    if(isset($_POST['submit'])){
-        //get form data
-        //mysqli_real_escape_string used to prevent SQL injection
-        $name = mysqli_real_escape_string($conn, $_POST['name']);
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $message = mysqli_real_escape_string($conn, $_POST['message']);
-        $message_category = mysqli_real_escape_string($conn, $_POST['message_category']);
-
-        $valid = 1;
-            
-        //TODO:input validation
-        //if all fields are valid, attempt to add the new item
-        if($valid == 1){
-            //SQL query
-                $sql = "INSERT INTO tbl_contact SET
-                name = '$name',
-                email = '$email',
-                message = '$message',
-                message_category = '$message_category'
-            ";
-            //Execute query
-            $result = mysqli_query($conn, $sql);
-            if($result){
-                echo "Message Sent Successfully";
-            }else{
-                echo "Message Failed to Send";
-            }
-        }else{
-            echo "Message Failed to Send";
-        }
-    }
-    ?>
 </main>
 <?php include('./partials/footer.php');?>
