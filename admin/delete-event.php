@@ -1,7 +1,7 @@
-<?php session_start();
-    include('../../private_html/constants.php'); 
+<?php
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
+    /** @var mysqli $conn */
 
     $id=$_GET['id'];
     $sql="DELETE FROM tbl_events WHERE id=$id";

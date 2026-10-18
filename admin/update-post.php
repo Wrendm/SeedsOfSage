@@ -1,6 +1,7 @@
-<?php session_start();
-    include('../../private_html/constants.php'); 
-    include('./partials/navbar.php'); ?>
+<?php
+    include('./partials/navbar.php'); 
+    /** @var mysqli $conn */
+    ?>
 <div>
 
 <div class="container-fluid">

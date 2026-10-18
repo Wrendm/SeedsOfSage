@@ -1,12 +1,12 @@
-<?php include('./partials/header.php');?>
-    <main class="container-fluid">
-        <div class="row py-3">
-            <div class="col-8 align-self-start border-bottom border-3">
+<?php include('./partials/header-off-canvas.php');?>
+    <main class="container-fluid pb-5 px-5">
+        <div class="row px-5 py-2">
+            <div class="col-12 pt-4 px-4 align-self-start border-bottom border-3" style="border-bottom-color: #7fa180 !important;">
                 <h1>Offerings</h1>
             </div>
         </div>
-        <div class="row py-3">
-            <div class="col-8 align-self-start">
+        <div class="row px-5 py-2">
+            <div class="col-12 px-4 align-self-start">
                 <table>
                     <tr>
                         <td>Initial Consultation</td>
@@ -43,28 +43,24 @@
                 </table>
                 <br />
                 <p>
-                <span style="font-weight: bold;">Insurance</span> I am contracted with <a href="https://mindfultherapygroup.com/" style="color:#000 !important;">Mindful Therapy Group</a> to accept Aetna, Cigna and Cigna EAP, Kaiser Permanente, Kaiser Permanente Northwest, Premera Blue Cross, Regence, United Healthcare and United Healthcare EAP in Washington State. Sessions may be conducted virtually or in-person at the local Mindful Therapy Group office located at 201 W North River Dr STE 301, Spokane, WA 99201.
+                <span style="font-weight: bold;">Insurance</span> lobortis et orci sit amet, sollicitudin cursus quam. Donec cursus lectus ut vehicula porttitor. Aenean aliquam varius massa, elementum luctus lectus viverra nec. Duis diam turpis, cursus quis iaculis ut, malesuada quis felis. In venenatis feugiat facilisis. Quisque quam elit, pharetra vitae iaculis in, ullamcorper sed tellus. Curabitur varius et nunc eu placerat. Vivamus at efficitur felis. Vivamus ut nunc at urna vulputate gravida. In luctus nec justo et ornare. Duis lacus ante, dictum nec leo a, pellentesque lobortis nunc. Mauris iaculis porttitor sapien, quis rutrum est lobortis nec. 
                 </p>
                 <p>
-                For holistic nature-based counseling services, I am unable to accept insurance. Counseling conducted from my office at 1616 W Wellesley Ave. Ste B., Spokane, WA 99205, virtual sessions outside of Mindful Therapy Group, organizational retreats and workshops, groups, and sessions outdoor must be paid for privately by clients not established with Mindful Therapy Group. For clients seeking nature-based services, I do accept payment from HSAs or FSAs, cash, card, or check. I can also create a superbill to submit to your insurance carrier, but I cannot guarantee that they will reimburse you.
+                <span style="font-weight: bold;">A Holistic Evaluation</span> lobortis et orci sit amet, sollicitudin cursus quam. Donec cursus lectus ut vehicula porttitor. Aenean aliquam varius massa, elementum luctus lectus viverra nec. Duis diam turpis, cursus quis iaculis ut, malesuada quis felis. In venenatis feugiat facilisis. Quisque quam elit, pharetra vitae iaculis in, ullamcorper sed tellus. Curabitur varius et nunc eu placerat. Vivamus at efficitur felis. Vivamus ut nunc at urna vulputate gravida. In luctus nec justo et ornare. Duis lacus ante, dictum nec leo a, pellentesque lobortis nunc. Mauris iaculis porttitor sapien, quis rutrum est lobortis nec. 
                 </p>
                 <p>
-                <span style="font-weight: bold;">A Holistic Evaluation</span> is an appointment that lasts approximately 2 hours. The purpose of this session is to get a holistic understanding of your past, present, and where you would like to be in the future. This evaluation can feel quite formal because I will be documenting your responses during the session. The hope is to capture everything you share so that you can get the most out of our work together. Outside of this appointment, any notes I may take will generally occur after our session is complete.
+                <span style="font-weight: bold;">Nature-based sessions</span> lobortis et orci sit amet, sollicitudin cursus quam. Donec cursus lectus ut vehicula porttitor. Aenean aliquam varius massa, elementum luctus lectus viverra nec. Duis diam turpis, cursus quis iaculis ut, malesuada quis felis. In venenatis feugiat facilisis. Quisque quam elit, pharetra vitae iaculis in, ullamcorper sed tellus. Curabitur varius et nunc eu placerat. Vivamus at efficitur felis. Vivamus ut nunc at urna vulputate gravida. In luctus nec justo et ornare. Duis lacus ante, dictum nec leo a, pellentesque lobortis nunc. Mauris iaculis porttitor sapien, quis rutrum est lobortis nec. 
                 </p>
                 <p>
-                <span style="font-weight: bold;">Nature-based sessions</span> are offered in Spokane and in surrounding areas. Nature-based sessions are offered to established clients who have had at least one in-person session and have been cleared by the provider to engage in nature-based therapy. Sessions outdoors are 60+ minutes and ideally take place in a natural area near your home so that you can connect with the site between scheduled sessions.
+                <span style="font-weight: bold;">Individual telehealth counseling sessions,</span> lobortis et orci sit amet, sollicitudin cursus quam. Donec cursus lectus ut vehicula porttitor. Aenean aliquam varius massa, elementum luctus lectus viverra nec.
+                <p>
+                <span style="font-weight: bold;">In-person individual, couple, or family mental health counseling sessions</span> mauris iaculis porttitor sapien, quis rutrum est lobortis nec. 
                 </p>
                 <p>
-                <span style="font-weight: bold;">Individual telehealth counseling sessions,</span> including phone or video calls ranging from 30+ minutes, are offered to established clients who have had at least one in-person session and have been cleared by the provider to engage in telehealth for their care.
+                <span style="font-weight: bold;">Counseling groups</span> in luctus nec justo et ornare. Duis lacus ante, dictum nec leo a, pellentesque lobortis nunc. 
                 </p>
                 <p>
-                <span style="font-weight: bold;">In-person individual, couple, or family mental health counseling sessions</span> take place in my comfortable and centrally located office. It is a home base for our work together. Sessions in-office last 50+ minutes and can occur up to once a week. 
-                </p>
-                <p>
-                <span style="font-weight: bold;">Counseling groups</span> change and evolve as the seasons. Please see our calendar for more information about upcoming groups, events, and workshops.
-                </p>
-                <p>
-                <span style="font-weight: bold;">Organizational workshops and retreats</span> are ideal for companies that are looking to boost morale or provide a respite for burnt out employees. It includes a needs assessment within your organization, a customized workshop or retreat lasting 2+ hours, and a follow up survey to track the impact of the workshop or retreat on your employees. It is a highly customizable option that can be tailored to meet the needs of your organization and employees.
+                <span style="font-weight: bold;">Organizational workshops and retreats</span> in ultricies odio a malesuada pulvinar. Duis iaculis sollicitudin tempor. Donec blandit ultrices lacus, quis euismod ante vehicula quis. Etiam in rhoncus justo. Praesent laoreet, libero vel mollis bibendum, nunc est rhoncus dui, non luctus sapien sem quis sem. 
                 </p>
                 <br />
                 <h2>Good Faith Estimate Disclaimer</h2>
@@ -80,7 +76,7 @@
                 If you choose to use the dispute resolution process, you must start the dispute process within 120 calendar days (about 4 months) of the date on the original bill.</p>
                 <p>There is a $25 fee to use the dispute process. If the agency reviewing your dispute agrees with you, you will have to pay the price on this GFE. 
                 If the agency disagrees with you and agrees with the health care provider or facility, you will have to pay the higher amount.</p>
-                <p>For questions or more information about your right to a GFE or the dispute process, visit <a href="www.cms.gov/nosurprises" style="color:#000 !important;">www.cms.gov/nosurprises</a> or call (800) 985-3059. 
+                <p>For questions or more information about your right to a GFE or the dispute process, visit <a href="https://www.cms.gov/nosurprises" style="color:#000 !important;">www.cms.gov/nosurprises</a> or call (800) 985-3059. 
                 Keep a copy of your GFE in a safe place or take pictures of it. You may need it if you are billed a higher amount.</p>
                 <p><span style="font-weight: bold;">PRIVACY ACT STATEMENT:</span> CMS is authorized to collect the information on this form and any supporting documentation under section 2799B-7 of the Public Health Service Act, as added by section 112 of the No Surprises Act, title I of Division BB of the Consolidated Appropriations Act, 2021 (Pub. L. 116-260). 
                 We need the information on the form to process your request to initiate a payment dispute, verify the eligibility of your dispute for the PPDR process, and to determine whether any conflict of interest exists with the independent dispute resolution entity selected to decide your dispute. 

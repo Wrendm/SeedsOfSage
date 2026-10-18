@@ -1,75 +1,113 @@
-body{
-    background-color: #edebe4 !important;
+.julius-sans-one-regular {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.row{
+body {
+    background-color: #f5ffde !important;
+}
+
+.row {
     justify-content: center;
     align-items: center;
 }
 
-.footer{
+.footer {
     width: 100%;
 }
 
-.footer a{
-    color:#dde7c7 !important;
+.footer a {
+    color: #dde7c7 !important;
 }
 
-td{
+td {
     padding: 0 10px;
 }
 
-h1{
+h1 {
     margin-bottom: 1.5rem !important;
+    font-family: 'Julius Sans One';
 }
 
-h2{
+h2 {
     margin-bottom: 20px !important;
     padding: 0px !important;
 }
 
-.btn-secondary{
+.btn-secondary {
     background-color: #DDE7C7;
 }
 
-.primary-text{
+a.spwidget-button:hover {
+    background-color: #58706e;
+}
+
+.primary-text {
     color: #fff;
 }
 
-input, textarea{
+input,
+textarea {
     border-radius: 5px;
     padding: 12px 20px;
     margin: 12px 0 !important;
-    width: 60%;
 }
 
-.nav-pills .nav-link.active{
+.adminNavbar {
+    background-color: #748075;
+}
+
+.nav-pills .nav-link.active {
     background-color: #DDE7C7 !important;
     color: #fff !important;
     border-color: #fff !important;
     font-size: 22px !important;
 }
 
-.nav-link{
+.nav-link {
     color: #fff !important;
     font-size: 22px !important;
     padding: 10px 30px !important;
 }
 
+@media only screen and (max-width: 990px) {
+    .navbar-brand {
+        max-width: 80%;
+    }
+}
+
 .dropdown-menu.show {
-    margin-left:30px !important;
+    margin-left: 30px !important;
 }
 
-.dropdown-item{
-    color:#587059 !important;
+.dropdown-item {
+    color: #587059 !important;
 }
 
-.header-img{
-    width: 50% !important;
+@media only screen and (max-width: 990px) {
+    .header-img {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .header-img {
+        max-width: 100%;
+        height: 130px;
+    }
+
+    .navbar {
+        padding: 0 40px !important;
+    }
 }
 
 .hero-image {
-    background-image: url("/images/trail-crop.jpg");
+    background-image: url("images/trail-crop.jpg");
     background-color: #cccccc;
     height: 500px;
     background-position: center;
@@ -77,8 +115,9 @@ input, textarea{
     background-size: cover;
     position: relative;
 }
+
 .blog-hero-image {
-    background-image: url("/images/oregonWaterfall.jpg");
+    background-image: url("images/oregonWaterfall.jpg");
     background-color: #cccccc;
     height: 500px;
     background-position: center;
@@ -86,23 +125,87 @@ input, textarea{
     background-size: cover;
     position: relative;
 }
-  
+
 .hero-text {
+    max-width: 80% !important;
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #587059;
+    background-color: rgba(245, 255, 222, 0.6);
+    padding: 40px !important;
 }
 
-.vertical-img{
-    max-height:450px;
-    max-width: 100%;
-    object-fit: cover;
+.vertical-img-wrapper {
+    display: flex;
+    margin: 20px 0;
 }
 
-.about-brief{
+@media only screen and (max-width: 626px) {
+    .vertical-img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (min-width: 626px) {
+    .vertical-img {
+        max-width: 70%;
+        object-fit: cover;
+    }
+}
+
+.about-brief,
+.approach {
+    background-color: #A3B18A;
+    color: #121c17;
+    padding: 0 15px;
+    border-radius: 20px;
+    max-width: 90% !important;
+}
+
+.about-brief .img-wrapper,
+.approach .img-wrapper {
+    display: flex;
+    align-content: center;
+}
+
+.about-brief a,
+.approach a {
+    color: #175d3a;
+}
+
+@media only screen and (min-width: 991px) {
+
+    .about-brief,
+    .approach {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.learnMore {
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.learnMore a {
+    background-color: #f5ffde;
+    color: #121c17;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: auto;
+}
+
+.learnMore a:hover {
+    color: #175d3a
+}
+
+.community {
     background-color: #A3B18A;
     color: #121c17;
     margin-left: -12px;
@@ -110,22 +213,143 @@ input, textarea{
     padding: 0 15px;
 }
 
-.approach{
-    background-color: #A3B18A;
-    color: #121c17;
-    margin-left: -12px;
-    margin-right: -12px;
-    padding: 0 15px;
-}
-
-.community{
-    background-color: #A3B18A;
-    color: #121c17;
-    margin-left: -12px;
-    margin-right: -12px;
-    padding: 0 15px;
-}
-
-.form-control-primary{
+.form-control-primary {
     background-color: #DDE7C7;
+}
+
+table {
+    width: 40%;
+}
+
+.word-wrap {
+    float: left;
+}
+
+@media only screen and (min-width: 626px) {
+    .word-wrap {
+        float: left;
+        width: 275px;
+    }
+}
+
+
+@media only screen and (max-width: 625px) {
+    .calendar {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .calendar .days {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .calendar .days .day_name {
+        display: none;
+    }
+
+    .calendar .days .day_num {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 626px) {
+    .calendar {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .calendar .days {
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .calendar .days .day_name {
+        width: calc(100% / 7);
+    }
+
+    .calendar .days .day_num {
+        width: calc(100% / 7);
+    }
+}
+
+.more a:link {
+    color: #206952 !important;
+}
+
+.more a:visited {
+    color: #206952 !important;
+}
+
+.details {
+    font-size: 12px;
+}
+
+.location {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.more {
+    font-style: italic;
+    font-size: 12px;
+    color: #f8f8ff;
+    font-style: normal;
+    margin-bottom: .25rem;
+}
+
+.calendar .header .month-year {
+    font-size: 24px;
+    color: #206952;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.calendar .days .day_name {
+    border-right: 1px solid #F9F3EC;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #F9F3EC;
+    background-color: #206952;
+}
+
+.calendar .days .day_name:nth-child(7) {
+    border: none;
+}
+
+.calendar .days .day_num {
+    display: flex;
+    flex-flow: column;
+    border-right: 1px solid #e6e9ea;
+    border-bottom: 1px solid #e6e9ea;
+    padding: 10px;
+    color: #206952;
+    min-height: 100px;
+}
+
+.calendar .days .day_num span {
+    display: inline-flex;
+    width: 30px;
+    font-size: 14px;
+}
+
+.calendar .days .day_num .event {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 6px;
+    line-height: normal;
+    border-radius: 4px;
+    background-color: #e9ffb5;
+    color: #206952;
+    hyphens: auto;
+}
+
+.calendar .days .day_num.ignore {
+    background-color: #e2ebce;
+    color: #8a7b69;
+}
+
+.hidden {
+    display: none;
 }

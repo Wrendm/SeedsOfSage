@@ -1,154 +1,87 @@
-<?php 
+<?php
     include('./partials/navbar.php');
+    include('./partials/check-login.php');
 ?>
-<div>
-    <h1>Add Item</h1>
-    <form action="" method="post" enctype="multipart/form-data">
-        <table>
-            <tr>
-                <td>Title: </td>
-                <td>
-                    <input type="text" name="title" placeholder="Item Title">
-                </td>
-            </tr>
-            <tr>
-                <td>Description: </td>
-                <td>
-                    <textarea name="description" placeholder="Item Description"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>Price: </td>
-                <td>
-                    <input type="number" name="price" min="0">
-                </td>
-            </tr>
-            <tr>
-                <td>Image: </td>
-                <td>
-                    <input type="file" name="image">
-                </td>
-            </tr>
-            <tr>
-                <td>Category ID: </td>
-                <td>
-                    <select name="category">
-                        <?php 
-                            $sql = "SELECT * FROM tbl_category WHERE active='Yes'";
-                            $result = mysqli_query($conn, $sql);
-                            if(mysqli_num_rows($result)){
-                                while ($categories = mysqli_fetch_assoc($result)){
-                                    $id = $categories['id'];
-                                    $title= $categories['title'];
-                                    ?>
-                                    <option value="<?php echo $id?>"><?php echo $title?></option>
-                                    <?php 
-                                }
-                            }else{?>
-                                <option value="0">No existing active categories</option>
-                            <?php } ?>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Featured: </td>
-                <td>
-                    <input type="radio" name="featured" value="Yes"> Yes
-                    <input type="radio" name="featured" value="No"> No
-                </td>
-            </tr>
-            <tr>
-                <td>Active: </td>
-                <td>
-                    <input type="radio" name="active" value="Yes"> Yes
-                    <input type="radio" name="active" value="No"> No
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" name="submit" value="Add Item" class="">
-                </td>
-            </tr>
-        </table>
-    </form>
-    <?php
-    if(isset($_POST['submit'])){
-        //get form data
-        $title = $_POST['title'];
-        $description = $_POST['description'];
-        $price = $_POST['price'];
-        $category = $_POST['category'];
-        if(isset($_POST['featured'])){
-            $featured = $_POST['featured'];
-        }else{
-            $featured = "No";
-        }
-        if(isset($_POST['active'])){
-            $active = $_POST['active'];
-        }else{
-            $active = "Yes";
-        }
-
-        $valid = 1;
-        $failure = "";
-        //input validation
-        if(strlen($title) < 1){
-            $failure .= "Item title is required\n";
-            $valid = 0;
-        }
-        if(strlen($description) < 1){
-            $failure .= "Item description is required\n";
-            $valid = 0;
-        }
-        if(isset($_FILES['image']['name'])){
-            $image_name=$_FILES['image']['name'];
-            $source_path=$_FILES['image']['tmp_name'];
-            $destination_path= "../images/items/".$image_name;
-            $ext = end(explode('.', $image_name));
-            //check if the file is an image or not. if not, exit and give an error message
-            if($ext != "jpeg" and $ext != "png" and $ext != "jpg"){
-                $_SESSION['failure'] = "File is not a valid type, must be JPG, JPEG, or PNG\n";
-                $valid = 0;
-            }
-            $upload = move_uploaded_file($source_path, $destination_path);
-            if($upload==False){
-                $_SESSION['upload'] = "Failed to Upload Image to Item\n";
-                header('Location:'.HOMEPAGE.'admin/manage-items.php');
-                die();
-            }
-        }else{
-            $image_name="";
-            $_SESSION['upload'] = "Failed to Upload Image\n";
-        }
-        
-        //if all fields are valid, attempt to add the new item
-        if($valid == 1){
-            //SQL query
-            $sql2 = "INSERT INTO tbl_item SET
-                title = '$title',
-                description = '$description',
-                price = $price,
-                image_name = '$image_name',
-                category_id = '$category',
-                featured = '$featured',
-                active = '$active'
-            ";
-            //Execute query
-            $result = mysqli_query($conn, $sql2);
-            if($result){
-                $_SESSION['add'] = "Item Addition of $title Successful";
-                header('Location:'.HOMEPAGE.'/admin/manage-items.php');
-            }
-            else{
-                $_SESSION['add'] = "Item Addition of $title Failed\n
-                $title $description $price $image_name $category $featured $active\n";
-                header('Location:'.HOMEPAGE.'/admin/manage-items.php');
-            }
-        }else{
-            $_SESSION['add'] = "Item Addition Failed";
-            header('Location:'.HOMEPAGE.'/admin/manage-items.php');
-        }
+<style>
+    .hidden{
+        display:none;
     }
-?>
+</style>
+ <script type="text/javascript">
+    function handleSelection(choice) {
+        document.getElementById('selectRepetition').disabled=true;
+        document.getElementById(choice).style.display="block";
+    }
+ </script>
+<div class="container-fluid">
+<div class="main-content my-3">
+    <h1>Add Event</h1>
+    <div class="row">
+        <div class="col-10">
+            <form action="validate-new-event.php" method="POST">
+                <p>Title</p> 
+                <div class="input-group mb-3">
+                    <input type="text" name="title" placeholder="Event Title" style="width:100%;">
+                </div>
+                <p>Description</p> 
+                <div class="input-group mb-3">
+                    <textarea name="description" placeholder="Event Description" rows="5" style="width:100%;"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <p>Date</p> 
+                        <div class="input-group mb-3">
+                            <input type="date" name="date">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <p>Time</p> 
+                        <div class="input-group mb-3">
+                            <input type="time" name="time">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <p>Location</p> 
+                        <div class="input-group mb-3">
+                            <input type="text" name="location">
+                        </div>
+                    </div>       
+                    <div class="col-3">   
+                        <p>Active</p> 
+                        <div class="input-group mb-3">
+                            <ul style="list-style-type: none;">
+                            <li><input type="radio" name="active" value="Yes"> Yes</li>
+                            <li><input type="radio" name="active" value="No"> No</li>
+                            </ul>
+                        </div>
+                    </div>         
+                </div>
+                <p>Repeat</p> 
+                <div class="input-group mb-3">
+                    <select name="select" id="selectRepetition" onChange="handleSelection(value)" class="form-select">
+                        <option selected value="no">No </option>
+                        <option value="weekly">Repeat by day of the week</option>
+                        <option value="monthly">Repeat by day of the month </option>
+                    </select>
+                    <div class="hidden input-group" id="weekly">
+                        </br>
+                        <p>How Many Times:</p> 
+                        <input type="number" id="weeklyRepetition" name="weeklyRepetition" />
+                        <p>How Frequently - where 1 means weekly, 2 means every two weeks, 52 means yearly, etc:</p> 
+                        <input type="number" id="weeklyRepetitionFrequency" name="weeklyRepetitionFrequency" max="52" />
+                    </div>
+                    <div class="hidden input-group" id="monthly">
+                        </br>
+                        <p>How Many Times:</p> 
+                        <input type="number" id="monthlyRepetition" name="monthlyRepetition" />
+                    </div>
+                </div>
+                <div class="input-group justify-content-center mb-3">
+                    <button type="submit" name="submit" value="Add Item" class="btn btn-light my-4">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </div>
 <?php include("partials/footer.php"); ?>

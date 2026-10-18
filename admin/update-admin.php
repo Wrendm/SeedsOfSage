@@ -1,4 +1,6 @@
-<?php include("/partials/navbar.php");?>
+<?php
+    include("./partials/navbar.php");
+    /** @var mysqli $conn */?>
     <div class="main-content">
         <h1>Update Admin</h1>
         <?php 

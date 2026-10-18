@@ -1,5 +1,5 @@
-<?php session_start();
-    include('../../private_html/constants.php'); 
+<?php
+/** @var mysqli $conn */
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
 

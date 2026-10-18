@@ -1,5 +1,4 @@
 <?php include('./partials/header-off-canvas.php');?>
-<?php include('../private_html/constants.php'); ?>
     <main class="container flex-shrink-0 d-flex flex-column">
     <div class="row">
         <div class="col-12 align-self-start mx-5 pt-4">

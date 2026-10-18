@@ -1,9 +1,10 @@
-<?php include("partials/navbar.php"); ?>
+<?php
+include('./partials/check-login.php');
+include('./partials/navbar.php'); ?>
         <!-- Main Content Start -->
         <div class="main-content">
             <div class="wrapper">
-                Main content goes here
-                
+                <h1>Welcome <?php echo $_SESSION['user']?>!</h1>
             </div>
         </div>
         <!-- Main Content End -->
