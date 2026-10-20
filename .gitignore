@@ -4,3 +4,5 @@ admin/config/constants.php
 *.sql
 *:Zone.Identifier
 *.sql
+!schema.sql
+!seed.sql

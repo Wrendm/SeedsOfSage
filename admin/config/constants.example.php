@@ -9,6 +9,8 @@ if (session_status() === PHP_SESSION_NONE) {
 // Base URL of the site, with a trailing slash. XAMPP serves plain http by default.
 define('HOMEPAGE', 'http://localhost/SeedsOfSage/');
 
+
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 // Database connection (XAMPP defaults: user "root", empty password)
 $conn = mysqli_connect('localhost', 'root', '')
     or die(mysqli_connect_error());
