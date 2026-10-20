@@ -2,9 +2,9 @@
     include("./partials/navbar.php"); 
     /** @var mysqli $conn */?>
         <!-- Main Content Start -->
-        <div class="container-fluid">
+        <div class="container main-content px-5 py-2">
             <div class="main-content my-3">
-                <div class="wrapper">
+                <div class="wrapper my-4">
                     <h1>Manage Admin</h1>
                     <?php 
                         if(isset($_SESSION['add'])){

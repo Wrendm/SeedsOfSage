@@ -58,6 +58,18 @@ textarea {
     background-color: #748075;
 }
 
+.admin-home-col{
+    background-color:#587059;
+    color: #fff;
+    text-align:center;
+    padding:20px;
+    margin: 10px;
+}
+
+.admin-home-col a{
+    color: #fff;
+}
+
 .nav-pills .nav-link.active {
     background-color: #DDE7C7 !important;
     color: #fff !important;
