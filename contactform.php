@@ -1,8 +1,9 @@
 <?php
 include('./partials/header-off-canvas.php');
+/** @var mysqli $conn */
 ?>
-<main class="container pb-5 px-5">
-    <div class="col-4 pt-4 align-self-start border-bottom border-3" style="border-bottom-color: #7fa180 !important;">
+<main class="container px-5 py-2">
+    <div class="col-12 pt-4 px-4 align-self-start border-bottom border-3" style="border-bottom-color: #7fa180 !important;">
         <h1>Contact Me</h1>
     </div>
     <div class="col-md-7 col-lg-8 py-4">

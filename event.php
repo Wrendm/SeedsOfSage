@@ -1,5 +1,6 @@
-<?php include('./partials/header-off-canvas.php');?>
-    <main class="container flex-shrink-0 d-flex flex-column">
+<?php include('./partials/header-off-canvas.php');
+/** @var mysqli $conn */?>
+    <main class="container px-5 py-2">
     <div class="row">
         <div class="col-12 align-self-start mx-5 pt-4">
             <a href="https://seedsofsagecounseling.com/calendar" style="color:#49574d;"><p> ... Back to Calendar</p></a>
@@ -21,7 +22,7 @@
                 $time = $post['time'];
                 $location = $post['location'];
             ?>
-            <div class="row py-3">
+            <div class="row px-5 py-2">
                 <div class="col-12 align-self-start border-bottom border-3" style="border-bottom-color: #7fa180 !important;">
                     <h1><?php echo $title?></h1>
                 </div>

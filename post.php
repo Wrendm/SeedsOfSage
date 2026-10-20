@@ -1,8 +1,10 @@
-<?php include('./partials/header-off-canvas.php');?>
-    <main class="container flex-shrink-0 d-flex flex-column">
+<?php include('./partials/header-off-canvas.php');
+/** @var mysqli $conn */
+?>
+    <main class="container px-5 py-2">
     <div class="row">
         <div class="col-12 align-self-start mx-5 pt-4">
-            <a href="https://seedsofsagecounseling.com/blog" style="color:#49574d;"><p> ... Back to All Posts</p></a>
+            <a href="<?php echo HOMEPAGE; ?>blog" style="color:#49574d;"><p> ... Back to All Posts</p></a>
         </div>
     </div>
             <?php
@@ -20,8 +22,8 @@
                 $published = $post['date'];
                 $content = $post['content'];
             ?>
-            <div class="row py-3">
-                <div class="col-12 align-self-start border-bottom border-3" style="border-bottom-color: #7fa180 !important;">
+            <div class="row px-5 py-2">
+                <div class="col-12 pt-4 px-4 align-self-start border-bottom border-3" style="border-bottom-color: #7fa180 !important;">
                     <h1><?php echo $title?></h1>
                 </div>
             </div>

@@ -67,9 +67,9 @@
   </div>
 
   <div class="blog-hero-image row">
-    <div class="col hero-text py-5" style="width: 350px; background-color: rgba(245, 255, 222, 0.7);">
-      <a href="./blog" style="text-shadow: 2px 2px 5px #587059; text-decoration: none;">
-        <h3 style="font-family: 'Julius Sans One', sans-serif; color:#587059;">Seeds of Sage Blog</h3>
+    <div class="col hero-text py-5" style="width: 375px; background-color: rgba(88, 112, 89, 0.7);">
+      <a href="./blog">
+        <img src="images/blog-placeholder.png" class="m-auto align-middle" style="width: 100%"></img>
       </a>
     </div>
   </div>

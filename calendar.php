@@ -1,6 +1,7 @@
 <?php include('./partials/header-off-canvas.php');?>
-<?php include('./partials/calendar-class.php');?>
-    <main class="container flex-shrink-0 d-flex flex-column">
+<?php include('./partials/calendar-class.php');
+/** @var mysqli $conn */?>
+    <main class="container px-5 py-2">
         <div class="row mt-4">
             <h1>Seeds of Sage Event Calendar</h1>
         </div>

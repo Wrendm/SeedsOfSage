@@ -1,7 +1,8 @@
-<?php include('./partials/header-off-canvas.php');?>
-    <main class="container flex-shrink-0 d-flex flex-column">
-        <div class="row mt-4">
-            <h1>Seeds of Sage Blog</h1>
+<?php include('./partials/header-off-canvas.php');
+/** @var mysqli $conn */?>
+    <main class="container px-5 py-2">
+        <div class="row mt-4 border-bottom border-3" style="border-bottom-color: #7fa180 !important;">
+            <h1>Blog</h1>
         </div>
         <div class ="row my-4">
             <?php

@@ -1,5 +1,5 @@
 <?php include('./partials/header-off-canvas.php');?>
-    <main class="container-fluid pb-5 px-5">
+    <main class="container px-5 py-2">
         <div class="row px-5 py-2">
             <div class="col-12 pt-4 px-4 align-self-start border-bottom border-3" style="border-bottom-color: #7fa180 !important;">
                 <h1>About Me</h1>
